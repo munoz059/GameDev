@@ -12,6 +12,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	public GameObject wall2;
 
+	public Text winText;
 
 
 	//double check this
@@ -20,6 +21,7 @@ public class NewBehaviourScript : MonoBehaviour {
 		count = 0;
 		SetCountText ();
 	//	gameObject.tag = "wall1";
+		winText.text="";
 
 	}
 
@@ -58,6 +60,10 @@ public class NewBehaviourScript : MonoBehaviour {
 			wall2.SetActive (false);
 		}
 
+		if (count >= 24) {
+			winText.text="You Win!!!";
+		
+		}
 	}
 
 
