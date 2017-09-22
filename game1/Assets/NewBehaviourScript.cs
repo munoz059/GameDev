@@ -44,7 +44,7 @@ public class NewBehaviourScript : MonoBehaviour {
 
 	void SetCountText()
 	{
-		ballsText.text = "Count:" + count.ToString ();
+		ballsText.text = "Objects:" + count.ToString ();
 
 		if (count >= 21) {
 
