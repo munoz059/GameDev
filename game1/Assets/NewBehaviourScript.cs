@@ -8,6 +8,9 @@ public class NewBehaviourScript : MonoBehaviour {
 	public Text ballsText;
 
 	private int count;
+	public GameObject wall1;
+
+	public GameObject wall2;
 
 
 
@@ -16,7 +19,7 @@ public class NewBehaviourScript : MonoBehaviour {
 	{
 		count = 0;
 		SetCountText ();
-		gameObject.tag = "wall1";
+	//	gameObject.tag = "wall1";
 
 	}
 
@@ -30,6 +33,8 @@ public class NewBehaviourScript : MonoBehaviour {
 
 			count = count + 1;
 			SetCountText ();
+			SetCountText ();
+
 
 
 		}
@@ -39,21 +44,29 @@ public class NewBehaviourScript : MonoBehaviour {
 	{
 		ballsText.text = "Count:" + count.ToString ();
 
-		if (count >= 2) {
+		if (count >= 21) {
 
 
 
 			//DestroyWall ();
 			//if(other.gameObject.CompareTag ("wall1")) 
-			//other.gameObject.SetActive (false);
+			wall1.SetActive (false);
 		}
+
+		if (count >= 23) {
+		
+			wall2.SetActive (false);
+		}
+
 	}
-		void thisTriggerEnter(Collider other)
-		{
-			if (other.gameObject.CompareTag ("wall1")) {
-				other.gameObject.SetActive (false);
-			}
-		}
+
+
+	//	void thisTriggerEnter(Collider other)
+		//{
+//			if (other.gameObject.CompareTag ("wall1")) {
+			//	other.gameObject.SetActive (false);
+	//		}
+	//	}
 	 
 }
 //void WallDown()
